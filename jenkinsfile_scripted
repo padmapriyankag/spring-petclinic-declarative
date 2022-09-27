@@ -1,0 +1,10 @@
+node('NODE1_LABEL') {
+    stage('git clone') {
+        git url: 'https://github.com/spring-projects/spring-petclinic.git',
+                branch : 'main'
+    }
+    stage("build package")
+    {
+        sh 'mvn package'
+    }
+}
