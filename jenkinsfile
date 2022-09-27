@@ -1,11 +1,6 @@
 pipeline{
     agent any
     stages {
-        stage('test'){
-            steps{
-            sh 'echo hello'
-        }
-        }
         stage('git clone'){
             agent{
                     label 'NODE1_LABEL'
@@ -24,6 +19,4 @@ pipeline{
             }
         }
     }
-  
-    
 }
